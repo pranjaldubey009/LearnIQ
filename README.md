@@ -1,140 +1,339 @@
-LearnIQ | AI-Powered Technical Interview Simulator
-<p align="center">
-  <strong>Practice interviews built around the code you actually write.</strong><br/>
-  Turn GitHub projects and your resume into personalized technical interview sessions.
-</p><p align="center">
-  <a href="https://learniq-abhi.vercel.app/">Live Demo</a> ·
-  <a href="https://github.com/pranjaldubey009/LearnIQ">Repository</a>
-</p><p align="center">
-  <img src="https://img.shields.io/badge/AI-Gemini-orange?style=flat-square" alt="Gemini AI"/>
-  <img src="https://img.shields.io/badge/Frontend-React%20%7C%20TypeScript-3178C6?style=flat-square" alt="React TypeScript"/>
-  <img src="https://img.shields.io/badge/Runtime-Bun-black?style=flat-square" alt="Bun"/>
-  <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat-square" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/ORM-Prisma-2D3748?style=flat-square" alt="Prisma"/>
-</p>✦ What is LearnIQ?
-LearnIQ is an AI-assisted technical interview practice platform that uses a developer's GitHub profile, repository context and optional resume to create a more personalized mock interview experience.
 
-Rather than relying only on generic question banks, LearnIQ aims to make interview practice relevant to the projects and technologies a developer has worked with—helping them prepare to explain implementation choices, code, architecture and trade-offs.
-Core idea: Your projects become your interview practice material.
+<div align="center">
 
-✦ Product Preview
-Landing Page
+# 🧠 LearnIQ
 
-Interview Experience
+### AI-Powered Learning & Interview Intelligence Platform
 
-Features
+<p>
+  <strong>Learn smarter. Understand deeper. Prepare confidently.</strong>
+</p>
 
-✦ Architecture
+<p>
+  <a href="https://learniq-abhi.vercel.app/">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_LearnIQ-6366f1?style=for-the-badge" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/pranjaldubey009/LearnIQ">
+    <img src="https://img.shields.io/badge/GitHub-Source_Code-111827?style=for-the-badge&logo=github" alt="GitHub" />
+  </a>
+</p>
 
-<details>
-<summary>Text-based architecture flow</summary>```mermaid
+<p>
+  <img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=flat&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-Language-3178C6?style=flat&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bun-Runtime-black?style=flat&logo=bun" />
+  <img src="https://img.shields.io/badge/AI-Gemini-8E75FF?style=flat" />
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" />
+</p>
+
+</div>
+
+---
+
+## ✦ Overview
+
+**LearnIQ** is an AI-powered learning and interview preparation platform built to help developers and students learn more efficiently, explore their code, strengthen technical knowledge, and prepare for career opportunities.
+
+By combining AI capabilities, developer-focused integrations, and a modern web experience, LearnIQ aims to transform the way learners approach technical preparation and skill development.
+
+> A smarter approach to learning, powered by AI.
+
+---
+
+## ✨ Core Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🤖 AI-Powered Intelligence
+Leverage AI-powered capabilities to support learning, understanding, and technical preparation.
+
+</td>
+<td width="50%">
+
+### 💼 Interview Preparation
+Explore tools designed to help improve technical readiness and interview confidence.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 🐙 GitHub Integration
+Connect developer workflows with GitHub-powered functionality and repository insights.
+
+</td>
+<td width="50%">
+
+### 🎯 Learning Experience
+A focused platform designed around skill development and structured learning.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### ⚡ Modern Interface
+Clean, responsive, and intuitive user experience.
+
+</td>
+<td width="50%">
+
+### 🌐 Web Platform
+Access the platform through a modern web-based interface.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🖥️ Preview
+
+<div align="center">
+
+### LearnIQ — Live Platform
+
+[**Open Live Demo →**](https://learniq-abhi.vercel.app/)
+
+</div>
+
+> Screenshots will be added here as the project UI evolves.
+
+---
+
+## 🏗️ System Architecture
+
+LearnIQ is built using a modular architecture that connects the frontend, backend services, AI integrations, database, and external APIs.
+
+```mermaid
 flowchart TD
-    U[Developer] --> FE[React + TypeScript Frontend]
-    FE --> API[Bun Backend API]
-    FE <--> VO[Browser Voice Interface]
-    VO --> API
-    API --> GH[GitHub API / Repository Context]
-    API --> AI[Google Gemini]
-    API --> ORM[Prisma ORM]
-    ORM --> DB[(PostgreSQL)]
-    GH --> CTX[Technical Context]
-    AI --> Q[Question Generation / Feedback]
+    U[👤 User] --> F[🌐 LearnIQ Frontend]
+    F --> B[⚙️ Backend API]
+    
+    B --> AI[🤖 Gemini AI]
+    B --> DB[(🗄️ PostgreSQL)]
+    B --> GH[🐙 GitHub API]
+    
+    DB --> P[Prisma ORM]
+    
+    class U,F,B,AI,GH,P blue
+    class DB green
 ```
-</details>✦ Experience Flow
-Stage	What happens
-01 · Profile	Enter a GitHub username or profile URL.
-02 · Analysis	Gather relevant public profile and repository context.
-03 · Resume	Optionally upload a PDF or TXT resume for additional context.
-04 · Preparation	Generate interview questions tailored to the available technical context.
-05 · Interview	Practice through the supported interactive interview flow.
-06 · Feedback	Review AI-generated evaluation and improvement suggestions.
 
+---
 
-✦ Highlights
-- Repository-aware preparation — practice around your projects and technologies.
-- GitHub profile context — use public profile and repository information as input.
-- Resume-aware workflow — optional PDF/TXT resume context.
-- AI-generated questions — personalized prompts based on available information.
-- Interactive interview flow — voice-oriented functionality where supported by the implementation and browser.
-- Feedback loop — AI-generated evaluation and suggestions to guide further practice.
-✦ Technology
-Layer	Technology	Role
-Frontend	React, TypeScript	Interface and client-side experience
-Runtime / tooling	Bun	Runtime and project tooling
-AI	Google Gemini	AI analysis, generation and feedback
-Repository context	GitHub API	Public profile and repository data
-Database	PostgreSQL	Persistent application data
-ORM	Prisma	Database access
-Deployment	Vercel	Frontend hosting
-Monorepo tooling	Turborepo	Workspace orchestration
+## 🧰 Technology Stack
 
+| Layer | Technologies |
+|---|---|
+| Frontend | React, TypeScript |
+| Runtime | Bun |
+| Monorepo | Turborepo |
+| Backend | Bun-based backend services |
+| Database | PostgreSQL |
+| ORM | Prisma |
+| AI | Google Gemini |
+| External Integration | GitHub API |
+| Deployment | Vercel |
 
-✦ Repository Layout
+---
+
+## 📁 Project Structure
+
+```text
 LearnIQ/
+│
 ├── apps/
-│   ├── frontend/
-│   └── backend/
-├── packages/
-├── docs/
-│   └── images/
-│       ├── landing-page.png
-│       ├── interview-dashboard.png
-│       ├── features.png
-│       └── architecture.png
+│   ├── web/              # Frontend application
+│   └── server/            # Backend application
+│
+├── packages/              # Shared packages and configurations
+│
+├── prisma/                # Database schema and ORM configuration
+│
+├── docs/                  # Documentation and assets
+│
 ├── package.json
 ├── turbo.json
 └── README.md
-Directory names may differ from this illustrative layout as the codebase evolves.
+```
 
-✦ Run Locally
-Prerequisites
-- Bun
+> Directory names may differ depending on the current repository structure.
+
+---
+
+## ⚙️ Getting Started
+
+Follow these steps to run LearnIQ locally.
+
+### 1. Prerequisites
+
+Ensure you have the following installed:
+
+- [Bun](https://bun.sh/)
 - Git
 - PostgreSQL
-- Google Gemini API key
-1. Clone
+- Node.js (if required by dependencies)
+
+---
+
+### 2. Clone the Repository
+
+```bash
 git clone https://github.com/pranjaldubey009/LearnIQ.git
+```
+
+```bash
 cd LearnIQ
-2. Install dependencies
+```
+
+---
+
+### 3. Install Dependencies
+
+```bash
 bun install
-3. Configure environment
-Create the backend .env file and provide your own values:
+```
+
+---
+
+### 4. Configure Environment Variables
+
+Create the appropriate `.env` file for your backend configuration.
+
+```env
 DATABASE_URL=your_postgresql_connection_string
 GEMINI_API_KEY=your_gemini_api_key
-GITHUB_TOKEN=your_github_token_optional
-Never commit credentials or secrets.
-4. Prepare the database
-Run the Prisma command from the workspace where the backend Prisma configuration is available:
-bunx prisma db push
-5. Start development
+GITHUB_TOKEN=your_github_token
+```
+
+| Variable | Description |
+|---|---|
+| `DATABASE_URL` | PostgreSQL database connection |
+| `GEMINI_API_KEY` | Google Gemini API key |
+| `GITHUB_TOKEN` | GitHub API access token (optional, depending on features) |
+
+> ⚠️ Never expose API keys or commit environment files to GitHub.
+
+---
+
+### 5. Run the Development Server
+
+From the project root:
+
+```bash
 bun run dev
-Follow the local URL printed by the development process.
-✦ Deployment Notes
-The frontend demo is hosted on Vercel. A fully functioning production deployment also needs the backend service, database, environment variables and frontend-to-backend configuration deployed and configured correctly.
-✦ Responsible Use & Limitations
-- GitHub analysis is limited by the data available through public repositories and configured API access.
-- AI-generated questions, summaries and evaluations can contain inaccuracies; use them as practice guidance, not authoritative hiring decisions.
-- Voice functionality depends on browser support and the features implemented in the application.
-- Do not upload sensitive personal information or confidential code unless you understand how it is processed and have permission to share it.
-✦ Roadmap
-- [ ] Deeper code and architecture analysis
-- [ ] More interview difficulty and role options
-- [ ] Interview history and progress tracking
-- [ ] Expanded evaluation and feedback insights
-- [ ] Additional language and framework coverage
-- [ ] Further improvements to voice interaction
-✦ Origin & Acknowledgements
-LearnIQ is an adaptation and further development inspired by SkillWiseAI.
+```
 
-Original inspiration: https://github.com/vartika6451/SkillWiseAI
+---
 
-This README acknowledges the inspiration and does not imply ownership of third-party code or grant rights beyond the applicable original licenses and permissions.
-✦ Developer
-Abhiman Dubey
+## 🌍 Deployment
+
+The frontend is deployed on Vercel.
+
+| Component | Platform |
+|---|---|
+| Frontend | Vercel |
+| Backend | Deployment configuration in progress |
+| Database | PostgreSQL |
+
+### Live Application
+
+🔗 https://learniq-abhi.vercel.app/
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Initial platform development
+- [x] Frontend deployment
+- [x] AI integration foundation
+- [x] GitHub integration foundation
+- [ ] Complete backend deployment
+- [ ] Expand AI-powered learning capabilities
+- [ ] Improve interview preparation workflows
+- [ ] Add enhanced personalized learning
+- [ ] Optimize mobile experience
+- [ ] Improve analytics and insights
+- [ ] Expand feature ecosystem
+
+---
+
+## 🔐 Security
+
+- Environment variables are used for sensitive configuration.
+- API keys should never be committed to the repository.
+- Production credentials should be configured securely through deployment environment settings.
+
+---
+
+## 🎯 Project Goals
+
+LearnIQ aims to:
+
+- Make technical learning more interactive.
+- Improve interview preparation workflows.
+- Integrate AI into developer learning experiences.
+- Build a practical platform combining modern web development and AI.
+- Explore the potential of AI-driven education technology.
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, ideas, and feedback are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Commit your changes.
+5. Open a Pull Request.
+
+---
+
+## 💡 Inspiration & Credits
+
+LearnIQ is an independent project inspired by ideas and approaches found in AI-powered educational and developer tools.
+
+It is being developed and iterated upon with the goal of creating a more useful learning experience.
+
+---
+
+## 👨‍💻 Author
+
+<div align="center">
+
+### Abhiman Dubey
+
+**Developer | AI & Web Development Enthusiast**
+
+<a href="https://github.com/pranjaldubey009">
 GitHub Profile
-✦ License
-This repository includes an MIT License file for LearnIQ as distributed in this repository. Third-party or previously existing code remains subject to its original licensing terms and any required permissions.
-<p align="center">
-  <strong>Build confidence by practicing with your own projects.</strong><br/>
-  LearnIQ
-</p>
+</a>
+
+</div>
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+See the `LICENSE` file for more information.
+
+---
+
+<div align="center">
+
+### 🧠 LearnIQ
+
+**Learn smarter. Build better. Grow faster.**
+
+<sub>Made with curiosity, code, and AI.</sub>
+
+</div>
+
